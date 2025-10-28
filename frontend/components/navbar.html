@@ -1,0 +1,72 @@
+<!-- Navigation Bar Component -->
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition">
+                    🛒 ShopHub
+                </a>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">Home</a>
+                <a href="index.html#products" class="text-gray-700 hover:text-indigo-600 font-medium transition">Products</a>
+                
+                <!-- User Menu -->
+                <div class="relative" id="userMenu">
+                    <a href="login.html" id="loginLink" class="text-gray-700 hover:text-indigo-600 font-medium transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Clear Recommendation History Button -->
+                <button id="clearRecBtn" class="hidden md:inline-flex items-center bg-gray-100 text-gray-700 px-3 py-1 rounded-md hover:bg-gray-200 transition text-sm" title="Clear Recommendation History">
+                    Clear Recommendation History
+                </button>
+
+                <!-- Cart Icon -->
+                <a href="cart.html" class="relative text-gray-700 hover:text-indigo-600 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    <span id="cartCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Check if user is logged in and update navbar
+    setTimeout(() => {
+        const user = JSON.parse(localStorage.getItem('user'));
+        const loginLink = document.getElementById('loginLink');
+            const clearBtn = document.getElementById('clearRecBtn');
+        
+        if (user && user.loggedIn) {
+            // User is logged in - show user name and logout option
+            loginLink.innerHTML = `
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    <span class="text-sm">${user.name}</span>
+                </div>
+            `;
+            loginLink.onclick = (e) => {
+                e.preventDefault();
+                if (confirm('Do you want to logout?')) {
+                    localStorage.removeItem('user');
+                    window.location.href = 'login.html';
+                }
+            };
+                // Show clear recommendations button for logged-in users
+                try { if (clearBtn) clearBtn.classList.remove('hidden'); } catch (err) {}
+        }
+    }, 100);
+</script>
+

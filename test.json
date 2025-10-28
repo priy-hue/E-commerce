@@ -1,0 +1,466 @@
+[
+    {
+        "id" : 201,
+        "name": "iphone-12",
+        "description": "A smartphone by Apple",
+        "price": 29.99,
+        "image": "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/234253_tumty3.png?tr=w-600",
+        "category_id": 11
+    },
+    {
+        "id" : 202,
+        "name": "samsung-galaxy-s21",
+        "description": "A smartphone by Samsung",
+        "price": 25.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvH3vIXdPIW_UgZFbV37LOr4vkNWmXop0ZVw&s",
+        "category_id": 11
+
+    },
+    {
+        "id" : 203,
+        "name": "oneplus-9",
+        "description": "A smartphone by OnePlus",
+        "price": 19.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGsFxgvTs59-tYIQILTwvlvE9IWRBgiuHWpw&s",
+        "category_id": 11
+    },
+    {
+        "id" : 204,
+        "name": "google-pixel-5",
+        "description": "A smartphone by Google",
+        "price": 21.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwarTjr5qJ28pe8y0-vdUbk5OTG0C_I6eC1g&s",
+        "category_id": 11
+    },
+    {
+        "id" : 205,
+        "name": "xiaomi-mi-11",
+        "description": "A smartphone by Xiaomi",
+        "price": 18.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHVftAXmS_C5fCuPpM7pfR4rsXwNtmOvtWvw&s",
+        "category_id": 11
+    },
+    {
+        "id" : 206,
+        "name": "i-pad-pro",
+        "description": "A tablet by Apple",
+        "price": 77.99,
+        "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-select-202405-11inch-silver-glossy-wificell_AV1_GEO_EMEA_FMT_WHH?wid=1280&hei=720&fmt=p-jpg&qlt=80&.v=YXpaUEtKWGhlNnNrVGZkTEo4T0xsNEsrMGFueUl5dllOTm9xWTIwTHNieHBIK1RHU1d3MGRmSnYwdi9jcFlpOERqN2ppWXdreURzYmQzZHJleG1QL0kwditrZ0FDVE1xajRmM2QzT20rdTA5SWJ3U2JHUWxtdUpYVVRueFFXL25Ka2N3K1FkbDdXalY0ZzB0eUtYVW5JV1doWHl1RFpqRmNwUlZxVEh3RDdkL2Nqb3psTFYwS0RVeTNQbUVOSjdu&traceId=1",
+        "category_id": 12
+    },
+    {
+        "id": 207,
+        "name": "samsung-galaxy-tab-s7",
+        "description": "A tablet by Samsung",
+        "price": 65.99,
+        "image": "https://sell.gameloot.in/wp-content/uploads/sites/4/2022/06/Samsung-Galaxy-Tab-S7-Plus-128-GB-ROM-12.5-Inch-Wi-Fi-Cellular-Any-Color.jpg",
+        "category_id": 12
+    },
+    {
+        "id": 209,
+        "name": "lenovo-tab-p11-pro",
+        "description": "A tablet by Lenovo",
+        "price": 55.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwSPOd_8PVzKO8EmlA1MPCRdvupeyjrGMtEg&s",
+        "category_id": 12
+    },
+    {
+        "id": 210,
+        "name": "lenovo ideapad-m5",
+        "description": "A laptop by Lenovo",
+        "price": 45.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKibIJvR5XkuWGmbFWc-IFExNcJE5nEoO62Q&s",
+        "category_id": 10
+    },
+    {
+        "id": 211,
+        "name": "dell-inspiron-15",
+        "description": "A laptop by Dell",
+        "price": 55.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgXhWV_B4QZxo60w7mUxIrNhKvNVmUpvKN9g&s",
+        "category_id": 10
+    },
+    {
+        "id": 212,
+        "name": "hp-pavilion-14",
+        "description": "A laptop by HP",
+        "price": 49.99,
+        "image": "https://id-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/c/0/c08679778_5.png",
+        "category_id": 10
+    },
+    {
+        "id": 213,
+        "name": "boat rockerz 255",
+        "description": "A headphone by Boat",
+        "price": 89.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_PMYOAavmiNDnfCcf9b6a6OS-rfbnPxRc6w&s",
+        "category_id": 13
+    },
+    {
+        "id": 214,
+        "name": "sony wh-1000xm4",
+        "description": "A headphone by Sony",
+        "price": 99.99,
+        "image": "https://www.sony.co.in/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=pjpeg&bgcolor=FFFFFF&bgc=FFFFFF&wid=2515&hei=1320",
+        "category_id": 13
+    },
+    {
+        "id": 215,
+        "name": "jbl tune 750btnc",
+        "description": "A headphone by JBL",
+        "price": 79.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_LrsPEFiOFHrUAnbT6EEonekdiqc2v5Wjug&s",
+        "category_id": 13           
+    },
+    {
+        "id": 216,
+        "name": "logitech-mx-master-3",
+        "description": "A mouse by Logitech",
+        "price": 109.99,
+        "image": "https://m.media-amazon.com/images/I/61xKiCADfpL.jpg",
+        "category_id": 14
+    },
+    {
+        "id": 217,
+        "name": "hp keyboard-k2500",
+        "description": "A keyboard by HP",
+        "price": 89.99,
+        "image": "https://m.media-amazon.com/images/I/81KyJGMJKNL.jpg",
+        "category_id": 14
+    },
+    {
+        "id": 218,
+        "name": "onelplus charger-warpspeed",
+        "description": "A charger by OnePlus",
+        "price": 119.99,
+        "image": "https://m.media-amazon.com/images/I/61MNFaRh0wL._AC_UF1000,1000_QL80_.jpg",
+        "category_id": 14
+    },
+    {
+        "id": 219,
+        "name": "shirt",
+        "description": "A cotton shirt",
+        "price": 139.99,
+        "image": "https://campussutra.com/cdn/shop/products/SCSS23SHRT_PNCHK58_M_PLN_LBUBU_1.jpg?v=1682073741",
+        "category_id": 5
+    },
+    {
+        "id": 220,
+        "name": "jeans",
+        "description": "A pair of denim jeans",
+        "price": 59.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToAO_EOb4I2ZLwe3q34AbJmDDIoqKgIt2hwg&s",
+        "category_id": 5
+    },
+    {
+        "id": 221,
+        "name": "womens jeans",
+        "description": "A pair of womens denim jeans",
+        "price": 89.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpMBFOVJ4zn5FU51iJLXGOA9klkEIoTOLEyQ&s",
+        "category_id": 6
+    },
+    { 
+        "id": 222,
+        "name": "dress",
+        "description": "A summer dress",
+        "price": 79.99,
+        "image": "hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3BN6SjMOJmp4XzdL7S4Q0KymIEfxlYtu-oA&s",
+        "category_id": 6
+
+    },
+    {
+        "id": 227,
+        "name": "one-piece dress",
+        "description": "A stylish one-piece dress",
+        "price": 149.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpq5hJtWei1RfwHEzZhtkZM4NvUxWbObyJJw&s",
+        "category_id": 6
+    },
+    {
+        "id": 226,
+        "name": "casual shoes",
+        "description": "A pair of casual shoes",
+        "price": 79.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2iHvfkcw3H67Oeizep0eeB_X_7BweVZm8iQ&s",
+        "category_id": 7
+    },
+    {
+        "id": 225,
+        "name": "formal shoes",
+        "description": "A pair of formal shoes",
+        "price": 129.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU20pENTZ_vS7OYmbk3KtX8bOEU7NjqQ9C2Q&s",
+        "category_id": 7
+    },
+    {
+        "id": 223,
+        "name": "running shoes",
+        "description": "A pair of running shoes",
+        "price": 99.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX2ADFColyc1Cr0-9ot3PxppCx93OI2m1-5w&s",
+        "category_id": 7
+    },
+    {
+        "id": 224,
+        "name": "sneakers",
+        "description": "A pair of casual sneakers",
+        "price": 89.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRupZvI6qVo--oHbKxrTRr4vJ9PoXTj5IV5tg&s",
+        "category_id": 7
+    },
+    {
+        "id": 228,
+        "name": "smartwatch",
+        "description": "A smartwatch by Fitbit",
+        "price": 199.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BqNAqUF1EJy6QlpBu16vflZ2tMvO5ZFDAQ&s",
+        "category_id": 8
+    },
+    {
+        "id": 229,
+        "name": "sunglassess ray-ban",
+        "description": "Sunglasses by Ray-Ban",
+        "price": 149.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZz_HCNq7wEdYy8UBM0QdN2josRHNA-10INg&s",
+        "category_id": 8
+    },
+    {
+        "id": 230,
+        "name": "leather wallet",
+        "description": "A leather wallet",
+        "price": 49.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTsBx3pWovO4Ivh2FgzLxCzTUItlr7KuNClw&s",
+        "category_id": 8
+    },
+    {
+        "id": 231,
+        "name": "belt",
+        "description": "A leather belt",
+        "price": 39.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCyZdlnDxpR-Ghb7DnK5GDYWcINErqFEfyCw&s",
+        "category_id": 8
+    },
+    {
+        "id": 232,
+        "name": "gold ring ",
+        "description": "A gold ring",
+        "price": 499.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUMzyyvFLCOOw2iD5hRtIOgmbm_JdGlB69Qg&s",
+        "category_id": 9
+    },
+    {
+        "id": 233,
+        "name": "silver necklace",
+        "description": "A silver necklace",
+        "price": 299.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB3CO3FV2l04SYp_6hHWEb7XVqlQpRBgPvyw&s",
+        "category_id": 9
+    },
+    {
+        "id": 234,
+        "name": "diamond earrings",
+        "description": "A pair of diamond earrings",
+        "price": 999.99,
+        "image": "https://assets.ajio.com/medias/sys_master/root/20240109/sig3/659c800674cb305fe00d2530/-1117Wx1400H-466964161-silver-MODEL.jpg",
+        "category_id": 9
+    },
+    {
+        "id": 235,
+        "name": "platinum bracelet",
+        "description": "A platinum bracelet",
+        "price": 799.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiHAdTtvKJzCTmrP1bRL9tc2N6M9RHdcLO8g&s",
+        "category_id": 9
+    },
+
+
+    
+
+
+
+    
+
+    {
+        "id": 236,
+        "name": "modern sofa set",
+        "description": "A modern sofa set for living room",
+        "price": 1299.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpvEEUF5dmSl7HeWjENrdVrQ2-6HNAdxw5PQ&s",
+        "category_id": 15
+    },
+    {
+        "id": 237,
+        "name": "dining table set",
+        "description": "A dining table set for six",
+        "price": 899.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCvlT8DYXAaqE7pEaOOWVM6OFNhGWPMeTaxA&s",
+        "category_id": 15
+    },
+    {
+        "id": 238,
+        "name": "queen size bed",
+        "description": "A queen size bed with storage",
+        "price": 1099.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMIbyznryzvLiVIsORjg0kcx27IzWnN3yZvA&s",
+        "category_id": 15
+    },
+    {
+        "id": 239,
+        "name": "office chair",
+        "description": "An ergonomic office chair",
+        "price": 199.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS314j1YXWNo5edB-W3-sFBQXjp3CkF7-Oyvg&s",
+        "category_id": 15   
+    },
+    {
+        "id": 240,
+        "name": "wooden wardrobe",
+        "description": "A wooden wardrobe with mirror",
+        "price": 799.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2NkUGv2gG8dST_yWhIGEri4sj2646TQNERQ&s",
+        "category_id": 15
+    },
+    {
+        "id": 241,
+        "name": "blender",
+        "description": "A kitchen blender",
+        "price": 299.99,
+        "image": "https://m.media-amazon.com/images/I/81C+H6RpALL._AC_UF350,350_QL80_.jpg",
+        "category_id": 16
+    },
+    {
+        "id": 242,
+        "name": "microwave oven",
+        "description": "A microwave oven",
+        "price": 499.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMnyH0nQXVyKnTmiQE8BETgMd0VukD6I0Bg&s",
+        "category_id": 16
+    },
+    {
+        "id": 243,
+        "name": "toaster",
+        "description": "A kitchen toaster",
+        "price": 199.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFa21brMIKGkta0-T-b3Ql8N2VKhIppn1isQ&s",
+        "category_id": 16
+    },
+    {
+        "id": 244,
+        "name": "coffee maker",
+        "description": "A coffee maker",
+        "price": 399.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi4_lQR0gfcHnUlSUJlJMBptwzIotIEQ3mEg&s",
+        "category_id": 16
+    },
+    {
+        "id": 245,
+        "name": "air fryer",
+        "description": "A kitchen air fryer",
+        "price": 599.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLpDvQJLRdOuUWNd7mHU7lW7IRlTo9Odq4SQ&s",
+        "category_id": 16
+    },
+    {
+        "id": 246,
+        "name": "decorative wase  ",
+        "description": "A decorative vase for home decor",
+        "price": 19.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWzYcjaa1npd1txiBc2kqe8L8QtslR24g9tA&s",
+        "category_id": 17
+    },
+    {
+        "id": 247,
+        "name": "wall art",
+        "description": "A piece of wall art for home decor",
+        "price": 49.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz84Wc4MnE06ZISq30Onj8QuktdY7vOjGZ3g&s",
+        "category_id": 17
+    },
+    { 
+        "id": 248,
+        "name": "table lamp",
+        "description": "A table lamp for home decor",
+        "price": 39.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDMhmIgDlYqyJweTjrKNQz6067W8WovQvhHQ&s",
+        "category_id": 17
+    },
+    {
+        "id": 249,
+        "name": "photo frame",
+        "description": "A photo frame for home decor",
+        "price": 29.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbLPyKgsTcgG8A5l69-Rmpf7_R83IJ_ywvaQ&s",
+        "category_id": 17
+    },
+    {
+        "id": 250,
+        "name": "luxory bed sheet",
+        "description": "A luxury bed sheet for home decor",
+        "price": 24.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6hEidD2hKPjJOD667BSo9Iw4DA7zezbbAaw&s",
+        "category_id": 18
+    },
+    {
+        "id": 251,
+        "name": "pillow",
+        "description": "A comfortable pillow for sleeping",
+        "price": 149.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH-aDuANvhQmLg0sKCjXKDyGvedykxWdUPtw&s",
+        "category_id": 18
+    },
+    {
+        "id": 253,
+        "name": "mattress",
+        "description": "A comfortable mattress for sleeping",
+        "price": 499.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVEpfNBSPzcFzAGLmnDOdO5TdYcwnrtxz80w&s",
+        "category_id": 18
+    },
+    {
+        "id": 252,
+        "name": "celling light",
+        "description": "A ceilling light for bedroom",
+        "price": 89.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBN4Ok_cEOrVLWVo9r4UIhEnUkW03MbwEY7A&s",
+        "category_id": 19
+    },
+    {
+        "id": 254,
+        "name": "desk lamp",
+        "description": "A desk lamp for studying",
+        "price": 59.99,
+        "image": "https://m.media-amazon.com/images/I/71D2YNJoNNL._AC_UF1000,1000_QL80_.jpg",
+        "category_id": 19
+    },
+    {
+        "id": 255,
+        "name": "tubebulb",
+        "description": "A tubebulb for lighting",
+        "price": 199.99,
+        "image": "https://www.thespruce.com/thmb/hczp1MYZHIj0PcjrTbqhc5C2ptM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-t-type-fluorescent-light-bulbs-1152396-05-f96f683098d14e30971288bb5d590d7d.jpg",
+        "category_id": 19
+    },
+    {
+        "id": 256,
+        "name": "outdoor lantern",
+        "description": "An outdoor lantern for garden",
+        "price": 79.99,
+        "image": "https://m.media-amazon.com/images/I/71hM8ctFyNL._AC_UF894,1000_QL80_.jpg",
+        "category_id": 19
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+    

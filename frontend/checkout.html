@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShopHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <script>
+        // Check if user is logged in
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Checkout Section -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-8">Checkout</h1>
+
+            <!-- Progress Steps -->
+            <div class="mb-8">
+                <div class="flex items-center justify-center">
+                    <div class="flex items-center">
+                        <div class="flex items-center text-indigo-600 relative">
+                            <div class="rounded-full h-12 w-12 flex items-center justify-center bg-indigo-600 text-white font-bold">1</div>
+                            <div class="absolute top-14 left-1/2 transform -translate-x-1/2 text-sm font-semibold">Shipping</div>
+                        </div>
+                        <div class="w-24 h-1 bg-gray-300 mx-2"></div>
+                        <div class="flex items-center text-gray-500 relative">
+                            <div class="rounded-full h-12 w-12 flex items-center justify-center bg-gray-300 font-bold">2</div>
+                            <div class="absolute top-14 left-1/2 transform -translate-x-1/2 text-sm font-semibold">Payment</div>
+                        </div>
+                        <div class="w-24 h-1 bg-gray-300 mx-2"></div>
+                        <div class="flex items-center text-gray-500 relative">
+                            <div class="rounded-full h-12 w-12 flex items-center justify-center bg-gray-300 font-bold">3</div>
+                            <div class="absolute top-14 left-1/2 transform -translate-x-1/2 text-sm font-semibold">Review</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Checkout Form -->
+                <div class="lg:col-span-2">
+                    <form id="checkoutForm" class="space-y-6">
+                        
+                        <!-- Shipping Information -->
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-4">Shipping Information</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
+                                    <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
+                                    <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                                    <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                                    <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Address *</label>
+                                    <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">City *</label>
+                                    <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">State *</label>
+                                    <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">ZIP Code *</label>
+                                    <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Country *</label>
+                                    <select required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                        <option value="">Select Country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="AU">Australia</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Information -->
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-4">Payment Information</h2>
+                            
+                            <!-- Payment Method Selection -->
+                            <div class="mb-4">
+                                <label class="block text-sm font-semibold text-gray-700 mb-3">Payment Method</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="payment" value="card" checked class="mr-3">
+                                        <span class="font-semibold">💳 Credit/Debit Card</span>
+                                    </label>
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="payment" value="paypal" class="mr-3">
+                                        <span class="font-semibold">🅿️ PayPal</span>
+                                    </label>
+                                    <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="payment" value="cod" class="mr-3">
+                                        <span class="font-semibold">💵 Cash on Delivery</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Card Details -->
+                            <div id="cardDetails" class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Card Number *</label>
+                                    <input type="text" placeholder="1234 5678 9012 3456" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Cardholder Name *</label>
+                                    <input type="text" placeholder="John Doe" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">Expiry Date *</label>
+                                        <input type="text" placeholder="MM/YY" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">CVV *</label>
+                                        <input type="text" placeholder="123" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Notes -->
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-4">Order Notes (Optional)</h2>
+                            <textarea rows="4" placeholder="Any special instructions for your order..." 
+                                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Order Summary</h2>
+                        
+                        <!-- Order Items -->
+                        <div id="checkoutItems" class="space-y-3 mb-4 max-h-64 overflow-y-auto">
+                            <!-- Items will be loaded here -->
+                        </div>
+
+                        <div class="border-t pt-4 space-y-3">
+                            <div class="flex justify-between text-gray-600">
+                                <span>Subtotal</span>
+                                <span id="checkoutSubtotal">$0.00</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>Shipping</span>
+                                <span class="text-green-600">FREE</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>Tax (10%)</span>
+                                <span id="checkoutTax">$0.00</span>
+                            </div>
+                            <div class="border-t pt-3">
+                                <div class="flex justify-between text-xl font-bold text-gray-800">
+                                    <span>Total</span>
+                                    <span id="checkoutTotal">$0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" form="checkoutForm" onclick="placeOrder(event)" 
+                                class="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition font-semibold mt-6">
+                            Place Order
+                        </button>
+
+                        <div class="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Secure Checkout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="assets/JS/cart.js"></script>
+    <script>
+        function placeOrder(e) {
+            e.preventDefault();
+            alert('Order placed successfully! Thank you for shopping with ShopHub.');
+            localStorage.removeItem('cart');
+            window.location.href = 'index.html';
+        }
+
+        // Load checkout items
+        window.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const checkoutItems = document.getElementById('checkoutItems');
+            
+            cart.forEach(item => {
+                checkoutItems.innerHTML += `
+                    <div class="flex gap-3 items-center">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded">
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-sm">${item.name}</h4>
+                            <p class="text-xs text-gray-600">Qty: ${item.quantity}</p>
+                        </div>
+                        <span class="font-semibold">$${(item.price * item.quantity).toFixed(2)}</span>
+                    </div>
+                `;
+            });
+
+            updateCheckoutSummary();
+        });
+
+        function updateCheckoutSummary() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.1;
+            const total = subtotal + tax;
+
+            document.getElementById('checkoutSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('checkoutTax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('checkoutTotal').textContent = `$${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

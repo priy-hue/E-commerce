@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports - ShopHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <script>
+        // Check if user is logged in
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Category Hero -->
+    <section class="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold mb-4">⚽ Sports & Fitness</h1>
+                <p class="text-xl">Get active with our sports equipment</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="bg-white py-4 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm text-gray-600">
+                <a href="index.html" class="hover:text-indigo-600">Home</a> / 
+                <span class="text-gray-800 font-semibold">Sports & Fitness</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Subcategories -->
+    <section class="py-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Browse by Subcategory</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <button onclick="filterBySubcategory('all')" class="subcategory-btn bg-orange-600 text-white p-4 rounded-lg hover:bg-orange-700 transition text-center" data-subcategory="all">
+                    <div class="text-3xl mb-2">⚽</div>
+                    <h3 class="font-semibold text-sm">All</h3>
+                </button>
+                <button onclick="filterBySubcategory('fitness')" class="subcategory-btn bg-gray-100 text-gray-800 p-4 rounded-lg hover:bg-gray-200 transition text-center" data-subcategory="fitness">
+                    <div class="text-3xl mb-2">🏋️</div>
+                    <h3 class="font-semibold text-sm">Fitness</h3>
+                </button>
+                <button onclick="filterBySubcategory('outdoor')" class="subcategory-btn bg-gray-100 text-gray-800 p-4 rounded-lg hover:bg-gray-200 transition text-center" data-subcategory="outdoor">
+                    <div class="text-3xl mb-2">🏕️</div>
+                    <h3 class="font-semibold text-sm">Outdoor</h3>
+                </button>
+                <button onclick="filterBySubcategory('cycling')" class="subcategory-btn bg-gray-100 text-gray-800 p-4 rounded-lg hover:bg-gray-200 transition text-center" data-subcategory="cycling">
+                    <div class="text-3xl mb-2">🚴</div>
+                    <h3 class="font-semibold text-sm">Cycling</h3>
+                </button>
+                <button onclick="filterBySubcategory('yoga')" class="subcategory-btn bg-gray-100 text-gray-800 p-4 rounded-lg hover:bg-gray-200 transition text-center" data-subcategory="yoga">
+                    <div class="text-3xl mb-2">🧘</div>
+                    <h3 class="font-semibold text-sm">Yoga</h3>
+                </button>
+                <button onclick="filterBySubcategory('team-sports')" class="subcategory-btn bg-gray-100 text-gray-800 p-4 rounded-lg hover:bg-gray-200 transition text-center" data-subcategory="team-sports">
+                    <div class="text-3xl mb-2">🏀</div>
+                    <h3 class="font-semibold text-sm">Team Sports</h3>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters & Sort -->
+    <section class="py-4 bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-4 items-center justify-between">
+                <div class="flex gap-2 items-center">
+                    <label class="text-sm font-semibold text-gray-700">Sort by:</label>
+                    <select id="sortSelect" onchange="sortProducts(this.value)" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+                <div class="text-sm text-gray-600">
+                    <span id="productCount">0</span> products found
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="sportsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+
+            <!-- No Products Message -->
+            <div id="noProducts" class="text-center py-12 hidden">
+                <div class="text-6xl mb-4">🔍</div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">No products found</h3>
+                <p class="text-gray-600">Try adjusting your filters or browse all products</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="assets/JS/sports.js"></script>
+</body>
+</html>

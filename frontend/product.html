@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ShopHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <script>
+        // Check if user is logged in
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Product Details Section -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+                    
+                    <!-- Product Images -->
+                    <div>
+                        <div class="mb-4">
+                            <img id="mainImage" src="https://via.placeholder.com/600x600" alt="Product" class="w-full rounded-lg">
+                        </div>
+                        <div class="grid grid-cols-4 gap-2">
+                            <img src="https://via.placeholder.com/150x150" class="w-full rounded-lg cursor-pointer border-2 border-indigo-600" onclick="changeImage(this.src)">
+                            <img src="https://via.placeholder.com/150x150/FF6B6B" class="w-full rounded-lg cursor-pointer border-2 border-transparent hover:border-indigo-600" onclick="changeImage(this.src)">
+                            <img src="https://via.placeholder.com/150x150/4ECDC4" class="w-full rounded-lg cursor-pointer border-2 border-transparent hover:border-indigo-600" onclick="changeImage(this.src)">
+                            <img src="https://via.placeholder.com/150x150/FFE66D" class="w-full rounded-lg cursor-pointer border-2 border-transparent hover:border-indigo-600" onclick="changeImage(this.src)">
+                        </div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div>
+                        <nav class="text-sm text-gray-500 mb-4">
+                            <a href="index.html" class="hover:text-indigo-600">Home</a> / 
+                            <a href="index.html#products" class="hover:text-indigo-600">Products</a> / 
+                            <span id="productCategory">Loading...</span>
+                        </nav>
+                        
+                        <h1 id="productName" class="text-3xl font-bold text-gray-800 mb-4">Loading product...</h1>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 text-xl">
+                                ★★★★★
+                            </div>
+                            <span class="text-gray-600 ml-2">(4.8 / 128 reviews)</span>
+                        </div>
+
+                        <div class="mb-6">
+                            <span id="productPrice" class="text-4xl font-bold text-indigo-600">$0.00</span>
+                            <span class="text-gray-500 line-through ml-3 text-xl" id="originalPrice">$0.00</span>
+                            <span class="ml-3 bg-red-500 text-white px-2 py-1 rounded text-sm">20% OFF</span>
+                        </div>
+
+                        <p id="productDescription" class="text-gray-600 mb-6 leading-relaxed">
+                            Loading product description...
+                        </p>
+
+                        <!-- Color Selection -->
+                        <div class="mb-6">
+                            <h3 class="text-sm font-semibold text-gray-800 mb-3">Color:</h3>
+                            <div class="flex gap-2">
+                                <button class="w-10 h-10 rounded-full bg-black border-2 border-gray-800"></button>
+                                <button class="w-10 h-10 rounded-full bg-gray-500 border-2 border-transparent hover:border-gray-800"></button>
+                                <button class="w-10 h-10 rounded-full bg-blue-500 border-2 border-transparent hover:border-gray-800"></button>
+                                <button class="w-10 h-10 rounded-full bg-red-500 border-2 border-transparent hover:border-gray-800"></button>
+                            </div>
+                        </div>
+
+                        <!-- Quantity Selection -->
+                        <div class="mb-6">
+                            <h3 class="text-sm font-semibold text-gray-800 mb-3">Quantity:</h3>
+                            <div class="flex items-center gap-3">
+                                <button onclick="decreaseQuantity()" class="w-10 h-10 bg-gray-200 rounded-lg hover:bg-gray-300 font-bold">-</button>
+                                <input type="number" id="quantity" value="1" min="1" class="w-20 text-center border border-gray-300 rounded-lg py-2">
+                                <button onclick="increaseQuantity()" class="w-10 h-10 bg-gray-200 rounded-lg hover:bg-gray-300 font-bold">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-4 mb-6">
+                            <button onclick="addToCart()" class="flex-1 bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition font-semibold">
+                                Add to Cart
+                            </button>
+                            <button class="bg-gray-200 text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-300 transition font-semibold">
+                                ❤️
+                            </button>
+                        </div>
+
+                        <!-- Product Features -->
+                        <div class="border-t pt-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">Key Features:</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>✓ Active Noise Cancellation</li>
+                                <li>✓ 30-Hour Battery Life</li>
+                                <li>✓ Premium Sound Quality</li>
+                                <li>✓ Comfortable Over-Ear Design</li>
+                                <li>✓ Bluetooth 5.0 Connectivity</li>
+                            </ul>
+                        </div>
+
+                        <!-- Shipping Info -->
+                        <div class="border-t mt-6 pt-6">
+                            <div class="flex items-center gap-4 text-sm text-gray-600">
+                                <span>🚚 Free Shipping</span>
+                                <span>🔄 30-Day Returns</span>
+                                <span>✅ 1-Year Warranty</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="assets/JS/product.js"></script>
+</body>
+</html>
+

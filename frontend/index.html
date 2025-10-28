@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Your Online Shopping Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <script>
+        // Check if user is logged in
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            // Redirect to login page if not logged in
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">Welcome to ShopHub</h1>
+                <p class="text-xl mb-8">Discover amazing products at unbeatable prices</p>
+                <a href="#products" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Shop by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="fashion.html" class="category-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer text-center">
+                    <div class="text-4xl mb-3">👕</div>
+                    <h3 class="font-semibold text-gray-800">Fashion</h3>
+                </a>
+                <a href="electronics.html" class="category-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer text-center">
+                    <div class="text-4xl mb-3">💻</div>
+                    <h3 class="font-semibold text-gray-800">Electronics</h3>
+                </a>
+                <a href="home-living.html" class="category-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer text-center">
+                    <div class="text-4xl mb-3">🏠</div>
+                    <h3 class="font-semibold text-gray-800">Home & Living</h3>
+                </a>
+                <a href="sports.html" class="category-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer text-center">
+                    <div class="text-4xl mb-3">⚽</div>
+                    <h3 class="font-semibold text-gray-800">Sports</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Products Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Personalized Recommendations</h2>
+               
+            </div>
+            
+            <!-- Recommended Products Grid -->
+            <div id="recommendedGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Recommended products will be loaded here by JavaScript -->
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center mt-8">
+                <a href="#products" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="assets/JS/MAIN.JS"></script>
+</body>
+</html>
