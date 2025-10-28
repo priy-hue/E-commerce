@@ -1,7 +1,7 @@
 // Home & Living Category Page JavaScript
 
-// Backend API URL
-const BACKEND_URL = 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - using centralized config
+const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
 
 // Store products fetched from backend
 let homeLivingProducts = [];
@@ -18,7 +18,8 @@ async function trackAddToCart(productId) {
     console.log('🛒 Product ID:', productId);
     
     try {
-        const userId = 11;
+        const storedUserId = parseInt(localStorage.getItem('user_id'));
+        const userId = Number.isInteger(storedUserId) ? storedUserId : DEFAULT_USER_ID;
         const trackingData = {
             product_id: parseInt(productId),
             user_id: userId

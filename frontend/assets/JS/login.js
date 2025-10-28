@@ -1,7 +1,7 @@
 // Login & Register Page JavaScript
 
-// Backend API URL
-const BACKEND_URL = 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - using centralized config
+const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
 
 // Load components
 async function loadComponent(elementId, filePath) {

@@ -2,8 +2,8 @@
 
 console.log('Product.js loaded! VERSION 2.0 - WITH TRACKING');
 
-// Backend API URL
-const BACKEND_URL = 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - using centralized config
+const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
 
 // Store current product
 let currentProduct = null;
@@ -16,7 +16,8 @@ async function trackProductView(productId) {
         console.log('=== TRACKING PRODUCT VIEW ===');
         console.log('Product ID:', productId);
         
-        const userId = 11;
+        const storedUserId = parseInt(localStorage.getItem('user_id'));
+        const userId = Number.isInteger(storedUserId) ? storedUserId : 11;
         const trackingData = {
             product_id: parseInt(productId),
             user_id: userId
@@ -56,7 +57,8 @@ async function trackProductView(productId) {
 // Track add to cart
 async function trackAddToCart(productId) {
     try {
-        const userId = 11; // Fixed user ID
+        const storedUserId = parseInt(localStorage.getItem('user_id'));
+        const userId = Number.isInteger(storedUserId) ? storedUserId : 11;
         
         console.log('Tracking add to cart:', { productId, userId });
         

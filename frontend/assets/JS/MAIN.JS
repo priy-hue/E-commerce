@@ -1,7 +1,7 @@
 // Main JavaScript for E-commerce Platform
 
-// Backend API URL
-const BACKEND_URL = 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - using centralized config
+const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
 
 // Store all products from backend
 let allProducts = [];
@@ -37,7 +37,7 @@ async function fetchRecommendedProducts() {
 
         // Add timeout
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
 
         const response = await fetch(`${BACKEND_URL}/recommend/${userId}?limit=8`, {
             signal: controller.signal
@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Track add to cart for recommendations
 async function trackAddToCart(productId) {
     try {
-        const userId = 11;
+        const storedUserId = parseInt(localStorage.getItem('user_id'));
+        const userId = Number.isInteger(storedUserId) ? storedUserId : 11;
         const trackingData = {
             product_id: parseInt(productId),
             user_id: userId

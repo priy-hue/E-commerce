@@ -1,7 +1,7 @@
 // Electronics Category Page JavaScript
 
-// Backend API URL
-const BACKEND_URL = 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - using centralized config
+const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
 
 // Category ID for electronics (Electronics is the parent category in backend)
 const ELECTRONICS_CATEGORY_ID = 2; // Electronics category ID
@@ -18,7 +18,8 @@ async function trackAddToCart(productId) {
     console.log('🛒 Product ID:', productId);
     
     try {
-        const userId = 11;
+        const storedUserId = parseInt(localStorage.getItem('user_id'));
+        const userId = Number.isInteger(storedUserId) ? storedUserId : 11;
         const trackingData = {
             product_id: parseInt(productId),
             user_id: userId
