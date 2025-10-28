@@ -1,7 +1,7 @@
 // Main JavaScript for E-commerce Platform
 
-// Backend API URL - using centralized config
-const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - ONLY from config.js
+const BACKEND_URL = window.CONFIG.BACKEND_URL;
 
 // Store all products from backend
 let allProducts = [];

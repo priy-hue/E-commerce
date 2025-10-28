@@ -1,7 +1,7 @@
 // Login & Register Page JavaScript
 
-// Backend API URL - using centralized config
-const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - ONLY from config.js
+const BACKEND_URL = window.CONFIG.BACKEND_URL;
 
 // Load components
 async function loadComponent(elementId, filePath) {
@@ -48,7 +48,7 @@ async function handleLogin(event) {
     
     try {
         // Send POST request to API
-        const response = await fetch('https://k2c936dp-8000.inc1.devtunnels.ms/login', {
+        const response = await fetch(`${BACKEND_URL}/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

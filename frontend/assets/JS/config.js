@@ -9,4 +9,6 @@ const CONFIG = {
 // Make available globally
 if (typeof window !== 'undefined') {
     window.CONFIG = CONFIG;
+    // Log for debugging
+    console.log('✅ CONFIG loaded:', CONFIG.BACKEND_URL);
 }

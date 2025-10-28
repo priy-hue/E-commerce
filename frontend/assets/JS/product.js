@@ -2,8 +2,8 @@
 
 console.log('Product.js loaded! VERSION 2.0 - WITH TRACKING');
 
-// Backend API URL - using centralized config
-const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - ONLY from config.js
+const BACKEND_URL = window.CONFIG.BACKEND_URL;
 
 // Store current product
 let currentProduct = null;

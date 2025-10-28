@@ -1,7 +1,7 @@
 // Electronics Category Page JavaScript
 
-// Backend API URL - using centralized config
-const BACKEND_URL = window.CONFIG?.BACKEND_URL || 'https://k2c936dp-8000.inc1.devtunnels.ms';
+// Backend API URL - ONLY from config.js
+const BACKEND_URL = window.CONFIG.BACKEND_URL;
 
 // Category ID for electronics (Electronics is the parent category in backend)
 const ELECTRONICS_CATEGORY_ID = 2; // Electronics category ID
